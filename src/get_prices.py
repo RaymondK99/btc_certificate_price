@@ -24,7 +24,7 @@ days_since_issuance_vont =  abs((datetime.now() - issuance_date_vontobel).days)
 days_since_issuance_xbt =  abs((datetime.now() - issuance_date_xbt).days)
 
 fee_von = 0.015
-fee_xbt = 0.007
+fee_xbt = 0.025
 divisor_vontobel = 100
 divisor_btc_zero = 10000
 divisor_xbt = 1.0/0.005
@@ -32,7 +32,7 @@ divisor_xbt = 1.0/0.005
 #acc_fees_von = fee_von * (days_since_issuance_vont/365.0)
 acc_fees_von = 1.0 - pow((1.0 - fee_von / 365), days_since_issuance_vont)
 
-acc_fees_xbt = fee_xbt * (days_since_issuance_xbt/365.0)
+#acc_fees_xbt = fee_xbt * (days_since_issuance_xbt/365.0)
 acc_fees_xbt = 1.0 - pow((1.0 - fee_xbt / 365), days_since_issuance_xbt)
 
 ## Print results
